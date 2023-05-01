@@ -1,0 +1,100 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;700;800&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1{
+    padding-top: 12%;
+    font-size: 3em;
+    color: #fff;
+}
+
+/* ---------------- Nav Bar---------------- */
+.nav-wrapper{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: fixed;
+    top: 6%;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+
+    padding: 1% 2%;
+    border-radius: 50px;
+    box-shadow: 2px 2px 8px #0000007a;
+    backdrop-filter: blur(5px);
+}
+
+.logo-text{
+    color: #fff;
+    font-weight: 700;
+}
+
+#links a{
+    text-decoration: none;
+    color: #fff;
+    margin-left: 10px;
+
+    display: inline-block;
+    text-shadow: 3px 2px 3px #00000070;
+    transition: .2s ease-in;
+}
+
+#links a:hover{
+    transform: translateY(-5px);
+}
+
+.ctrl-btn{
+    visibility: hidden;
+    pointer-events: none;
+    background: none;
+    border: none;
+    color: #fff;
+}
+
+/* -----------------Landing Page--------------- */
+
+.landing {
+    height: 100vh;
+    background-image: url(./images/back.jpg);
+    background-size: cover;
+    text-align: center;
+}
+
+
+@media screen and (max-width: 600px) {
+    #links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: flex-end;
+        padding: 2% 7%;
+        backdrop-filter: blur(8px);
+        position: fixed;
+        height: 100vh;
+        width: 50%;
+        right: -60%;
+        top: 0px;
+        transition: .5s ease-in;
+    }
+
+    .ctrl-btn{
+        visibility: visible;
+        pointer-events: all;
+    }
+
+    nav{
+        backdrop-filter: none;
+    }
+
+    h1{
+        padding-top: 35%;
+    }
+}
